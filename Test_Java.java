@@ -6,7 +6,7 @@
 */
 
 /* Name of file */
-public class Test_Java{
+public class Test_Java {
 
 /* Function/Types Declaration */
 
@@ -19,7 +19,7 @@ public class Test_Java{
 * @return Vrai si a>b
 */
 public static boolean plusGranDouble(double a,double b){
-	if (a>b)return true;
+	if ( a > b ) return true;
 	else return false;
 }
 
