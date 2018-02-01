@@ -10,6 +10,9 @@ public class Test_Java {
 
 /* Function/Types Declaration */
 
+/* -------------------------------------------------------------------------------------- */
+//Fonction de calcul numérique
+
 /**
 * Retourne le plus grand des arguments
 * entre a et b de type double.
@@ -18,7 +21,7 @@ public class Test_Java {
 * @param b un double
 * @return Vrai si a>b
 */
-public static boolean plusGranDouble(double a,double b){
+public static boolean plusGrand(double a,double b){
 	if ( a > b ) return true;
 	else return false;
 }
@@ -31,7 +34,7 @@ public static boolean plusGranDouble(double a,double b){
 * @param b un int
 * @return Vrai si a>b
 */
-public static boolean plusGrandInt(int a,int b){
+public static boolean plusGrand(int a,int b){
 	if (a>b)return true;
 	else return false;
 }
@@ -44,10 +47,13 @@ public static boolean plusGrandInt(int a,int b){
 * @param b un float
 * @return Vrai si a>b
 */
-public static boolean plusGrandFloat(float a,float b){
+public static boolean plusGrand(float a,float b){
 	if (a>b)return true;
 	else return false;
 }
+
+/* -------------------------------------------------------------------------------------- */
+//Tableau
 
 /** 
 * Remplie un tableau de boolean de dimention 1 avec équiprobabilité
@@ -55,7 +61,7 @@ public static boolean plusGrandFloat(float a,float b){
 *
 * @param tab un tableau de boolean de dimmention 1
 */
-public static void initTableauBoolD1(boolean [] tab){
+public static void initTableauD1(boolean [] tab){
 	int i;
 	for (i = 0 ; i < tab.length ; i++ ){
 		tab[i] = (Math.random()<0.5);
@@ -68,7 +74,7 @@ public static void initTableauBoolD1(boolean [] tab){
 *
 * @param tab un tableau de boolean de dimention 2
 */
-public static void initTableauBoolD2(boolean [][] tab) {
+public static void initTableauD2(boolean [][] tab) {
 	int i,j;
 	for (i = 0 ; i < tab.length ; i++ ){
 		for (j = 0 ; j < tab.length ; j++){
@@ -83,7 +89,7 @@ public static void initTableauBoolD2(boolean [][] tab) {
 *
 * @param tab un tableau de int de dimmention 1
 */
-public static void initTableauIntD1(int [] tab){
+public static void initTableauD1(int [] tab){
 	int i;
 	for (i = 0 ; i < tab.length ; i++ ){
 		tab[i] = ((int)Math.random());
@@ -96,11 +102,39 @@ public static void initTableauIntD1(int [] tab){
 *
 * @param tab un tableau de int de dimention 2
 */
-public static void initTableauIntD2(int [][] tab) {
+public static void initTableauD2(int [][] tab) {
 	int i,j;
 	for (i = 0 ; i < tab.length ; i++ ){
 		for (j = 0 ; j < tab.length ; j++){
 			tab[i][j] = ((int)Math.random());
+		}
+	}
+}
+
+/** 
+* Remplie un tableau de float de dimention 1 avec équiprobabilité
+* d'un tableau de float passer en parametre.
+*
+* @param tab un tableau de float de dimmention 1
+*/
+public static void initTableauD1(float [] tab){
+	int i;
+	for (i = 0 ; i < tab.length ; i++ ){
+		tab[i] = ((float)Math.random());
+	}
+}
+
+/** 
+* Remplie un tableau de float de dimention 2 avec équiprobabilité
+* d'un tableau de float passer en parametre.
+*
+* @param tab un tableau de float de dimention 2
+*/
+public static void initTableauD2(float [][] tab) {
+	int i,j;
+	for (i = 0 ; i < tab.length ; i++ ){
+		for (j = 0 ; j < tab.length ; j++){
+			tab[i][j] = ((float)Math.random());
 		}
 	}
 }
@@ -111,7 +145,7 @@ public static void initTableauIntD2(int [][] tab) {
 *
 * @param tab un tableau de double de dimmention 1
 */
-public static void initTableauDoubleD1(double [] tab){
+public static void initTableauD1(double [] tab){
 	int i;
 	for (i = 0 ; i < tab.length ; i++ ){
 		tab[i] = (Math.random());
@@ -124,7 +158,7 @@ public static void initTableauDoubleD1(double [] tab){
 *
 * @param tab un tableau de double de dimention 2
 */
-public static void initTableauDoubleD2(double [][] tab) {
+public static void initTableauD2(double [][] tab) {
 	int i,j;
 	for (i = 0 ; i < tab.length ; i++ ){
 		for (j = 0 ; j < tab.length ; j++){
@@ -138,9 +172,9 @@ public static void initTableauDoubleD2(double [][] tab) {
 *
 * @param tab : Un tableau a une dimention
 */
-public static void affichageTableauDoubleD1(double [] tab){
-	double i; 
-	for (i = 0.0 ; i < tab.length ; i++){
+public static void affichageTableauD1(double [] tab){
+	int i; 
+	for (i = 0 ; i < tab.length ; i++){
 		System.out.println((i+1.0) + " : " + tab[i]);
 	}
 }
@@ -150,11 +184,11 @@ public static void affichageTableauDoubleD1(double [] tab){
 *
 * @param tab : Un tableau a deux dimention
 */
-public static void affichageTableauDoubleD2(double [] tab){
-	double i,j; 
+public static void affichageTableauD2(double [][] tab){
+	int i,j; 
 	for (i = 0 ; i < tab.length ; i++){
 		for (j = 0 ; j < tab.length ; j++)
-		System.out.println((i+1) + " : " + tab[i]);
+		System.out.println("i = " + (i+1) + " //// j =  " + (j+1) + " : " + tab[i][j]);
 	}
 }
 
@@ -163,7 +197,7 @@ public static void affichageTableauDoubleD2(double [] tab){
 *
 * @param tab : Un tableau a une dimention
 */
-public static void affichageTableauIntD1(int [] tab){
+public static void affichageTableauD1(int [] tab){
 	int i; 
 	for (i = 0 ; i < tab.length ; i++){
 		System.out.println((i+1) + " : " + tab[i]);
@@ -175,12 +209,11 @@ public static void affichageTableauIntD1(int [] tab){
 *
 * @param tab : Un tableau a deux dimention
 */
-public static void affichageTableauIntD2(int [] tab){
+public static void affichageTableauD2(int [][] tab){
 	int i,j; 
 	for (i = 0 ; i < tab.length ; i++){
 		for (j = 0 ; j < tab.length ; j++){
-		System.out.print(tab[j] + " ");
-		System.out.println((i+1) + " : " + tab[i]);
+		System.out.println("i = " + (i+1) + " //// j =  " + (j+1) + " : " + tab[i][j]);
 		}
 	}
 }
@@ -190,8 +223,8 @@ public static void affichageTableauIntD2(int [] tab){
 *
 * @param tab : Un tableau a une dimention
 */
-public static void affichageTableauFloatD1(float [] tab){
-	float i; 
+public static void affichageTableauD1(float [] tab){
+	int i; 
 	for (i = 0 ; i < tab.length ; i++){
 		System.out.println((i+1) + " : " + tab[i]);
 	}
@@ -202,27 +235,52 @@ public static void affichageTableauFloatD1(float [] tab){
 *
 * @param tab : Un tableau a deux dimention
 */
-public static void affichageTableauFloatD2(float [] tab){
-	float i,j; 
+public static void affichageTableauD2(float [][] tab){
+	int i,j; 
 	for (i = 0 ; i < tab.length ; i++){
 		for (j = 0 ; j < tab.length ; j++){
 		System.out.print(tab[j] + " ");
-		System.out.println((i+1) + " : " + tab[i]);
+		System.out.println("i = " + (i+1) + " //// j =  " + (j+1) + " : " + tab[i][j]);
 		}
+	}
+}
+
+
+
+/** 
+* Affichage d'un tableau a 1 dimention de String
+*
+* @param tab : Un tableau a une dimention
+*/
+public static void affichageTableauD1(String [] tab){
+	int i; 
+	for (i = 0 ; i < tab.length ; i++){
+		System.out.println((i+1.0) + " : " + tab[i]);
+	}
+}
+
+/** 
+* Affichage d'un tableau a 2 dimention de String
+*
+* @param tab : Un tableau a deux dimention
+*/
+public static void affichageTableauD2(String [][] tab){
+	int i,j; 
+	for (i = 0 ; i < tab.length ; i++){
+		for (j = 0 ; j < tab.length ; j++)
+		System.out.println("i = " + (i+1) + " //// j =  " + (j+1) + " : " + tab[i][j]);
 	}
 }
 
 /** 
 * Affichage d'un tableau a 1 dimention de boolean
 *
-* @param tab : Un tableau a deux dimention
+* @param tab : Un tableau a une dimention
 */
-public static void affichageTableauFloatD1(boolean [] tab){
-	boolean i,j; 
+public static void affichageTableauD1(boolean [] tab){
+	int i; 
 	for (i = 0 ; i < tab.length ; i++){
-		for (j = 0 ; j < tab.length ; j++){
-		System.out.println((i+1) + " : " + tab[i]);
-		}
+		System.out.println((i+1.0) + " : " + tab[i]);
 	}
 }
 
@@ -231,28 +289,25 @@ public static void affichageTableauFloatD1(boolean [] tab){
 *
 * @param tab : Un tableau a deux dimention
 */
-public static void affichageTableauFloatD2(boolean [] tab){
-	boolean i,j; 
+public static void affichageTableauD2(boolean [][] tab){
+	int i,j; 
 	for (i = 0 ; i < tab.length ; i++){
-		for (j = 0 ; j < tab.length ; j++){
-		System.out.print(tab[j] + " ");
-		System.out.println((i+1) + " : " + tab[i]);
-		}
+		for (j = 0 ; j < tab.length ; j++)
+		System.out.println("i = " + (i+1) + " //// j =  " + (j+1) + " : " + tab[i][j]);
 	}
 }
+
 
 
 /* Main of file */
 	public static void main(String[] args) {
 		//Variables locales
 		final int TAILLE = 100;
-		boolean [] tab = new boolean [TAILLE];
-		int i; 
+		boolean [][] tab = new boolean [TAILLE][TAILLE];  //Création tableau de boolean à une dimention
+		int i;                                 //Initialisation de la variable
 		//Execution du programme
-		initTableauBoolD1(tab);
-		for (i = 0 ; i < tab.length ; i++){
-			System.out.println((i+1) + " : " + tab[i]);
-		}
+		initTableauD2(tab);
+		affichageTableauD2(tab);
 
 	}
 }
