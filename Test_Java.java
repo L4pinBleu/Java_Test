@@ -90,9 +90,9 @@ public static void initTableauD2(boolean [][] tab) {
 * @param tab un tableau de int de dimmention 1
 */
 public static void initTableauD1(int [] tab){
-	int i;
+	int i , lower = 0, higher = 101; //Int entre 0 et 100 (101 exclus)
 	for (i = 0 ; i < tab.length ; i++ ){
-		tab[i] = ((int)Math.random());
+		tab[i] = ( ((int)Math.random() * (higher - lower)) + lower );
 	}
 }
 
@@ -103,10 +103,10 @@ public static void initTableauD1(int [] tab){
 * @param tab un tableau de int de dimention 2
 */
 public static void initTableauD2(int [][] tab) {
-	int i,j;
+	int i,j, lower =0, higher =101; //Int entre 0 et 100 (101 exclus)
 	for (i = 0 ; i < tab.length ; i++ ){
 		for (j = 0 ; j < tab.length ; j++){
-			tab[i][j] = ((int)Math.random());
+			tab[i][j] = ( (int) (Math.random( ) * (higher - lower)) +lower );
 		}
 	}
 }
@@ -118,9 +118,9 @@ public static void initTableauD2(int [][] tab) {
 * @param tab un tableau de float de dimmention 1
 */
 public static void initTableauD1(float [] tab){
-	int i;
+	int i, lower = 0, higher = 100;//Float entre 0 et 99.99...
 	for (i = 0 ; i < tab.length ; i++ ){
-		tab[i] = ((float)Math.random());
+		tab[i] = ( (float) (Math.random( ) * (higher - lower)) +lower );
 	}
 }
 
@@ -131,10 +131,10 @@ public static void initTableauD1(float [] tab){
 * @param tab un tableau de float de dimention 2
 */
 public static void initTableauD2(float [][] tab) {
-	int i,j;
+	int i,j , lower = 0, higher = 100; //Float entre 0 et 99.99...
 	for (i = 0 ; i < tab.length ; i++ ){
 		for (j = 0 ; j < tab.length ; j++){
-			tab[i][j] = ((float)Math.random());
+			tab[i][j] = ( (float) (Math.random( ) * (higher - lower)) +lower );
 		}
 	}
 }
@@ -146,9 +146,9 @@ public static void initTableauD2(float [][] tab) {
 * @param tab un tableau de double de dimmention 1
 */
 public static void initTableauD1(double [] tab){
-	int i;
+	int i, lower =0, higher = 100  ; //Double entre 0 et 99.99 ...
 	for (i = 0 ; i < tab.length ; i++ ){
-		tab[i] = (Math.random());
+		tab[i] = ( (double) (Math.random( ) * (higher - lower)) +lower );
 	}
 }
 
@@ -159,10 +159,10 @@ public static void initTableauD1(double [] tab){
 * @param tab un tableau de double de dimention 2
 */
 public static void initTableauD2(double [][] tab) {
-	int i,j;
+	int i,j, lower =0, higher = 100 ; //Double entre 0 et 99.99 ...
 	for (i = 0 ; i < tab.length ; i++ ){
 		for (j = 0 ; j < tab.length ; j++){
-			tab[i][j] = (Math.random());
+			tab[i][j] = ( (double) (Math.random( ) * (higher - lower)) +lower );
 		}
 	}
 }
@@ -175,7 +175,7 @@ public static void initTableauD2(double [][] tab) {
 public static void affichageTableauD1(double [] tab){
 	int i; 
 	for (i = 0 ; i < tab.length ; i++){
-		System.out.println((i+1.0) + " : " + tab[i]);
+		System.out.println((i+1) + " : " + tab[i]);
 	}
 }
 
@@ -302,8 +302,8 @@ public static void affichageTableauD2(boolean [][] tab){
 /* Main of file */
 	public static void main(String[] args) {
 		//Variables locales
-		final int TAILLE = 100;
-		boolean [][] tab = new boolean [TAILLE][TAILLE];  //Création tableau de boolean à une dimention
+		final int TAILLE = 2;
+		int [][] tab = new int [TAILLE][TAILLE];  //Création tableau de boolean à une dimention
 		int i;                                 //Initialisation de la variable
 		//Execution du programme
 		initTableauD2(tab);
