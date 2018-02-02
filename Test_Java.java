@@ -304,7 +304,70 @@ public static void affichageTableauD2(boolean [][] tab){
 	}
 }
 
+/** 
+* Initialisation d'un tableau de Type Agrége de coordonée a une dimention
+*
+* @param tab : Tableau de type agreger
+*/
 
+public static void initTableauD1 (coordPoint [] tab){
+	int i;
+	for (i = 0 ; i < tab.length ; i++){
+		
+		tab[i] = new coordPoint();
+		tab[i].x = ( (double)Math.random()*(50-25) ) +25;
+		tab[i].y = ( (double)Math.random()*(50-25) ) +25;
+		tab[i].z = ( (double)Math.random()*(50-25) ) +25;
+
+	}
+}
+
+/** 
+* Initialisation d'un tableau de Type Agrége de coordonée a deux dimention
+*
+* @param tab : Tableau de type agreger
+*/
+
+public static void initTableauD2 (coordPoint [] tab){
+	int i,j;
+	for (i = 0 ; i < tab.length ; i++){
+		for (j = 0 ; j < tab.length ; j++){
+		
+			tab[i][j] = new coordPoint();
+			tab[i][j].x = ( (double)Math.random()*(50-25) ) +25;
+			tab[i][j].y = ( (double)Math.random()*(50-25) ) +25;
+			tab[i][j].z = ( (double)Math.random()*(50-25) ) +25;
+		}
+	}
+}
+
+/** 
+* Affichage d'un tableau de Type agreger de coordonée a une dimention
+*
+* @param tab : Tableau de type agreger
+*/
+
+public static void affichageTableauD1 (coordPoint [] tab){
+	int i; 
+	for (i = 0 ; i < tab.length ; i++){
+		System.out.println((i+1) + " : " + "x = " + tab[i].x + " " + "y = " + " "  + tab[i].y + " z = " + " " + tab[i].z);
+	}
+}
+
+/** 
+* Affichage d'un tableau de Type agreger de coordonée a deux dimentions
+*
+* @param tab : Tableau de type agreger
+*/
+
+public static void affichageTableauD1 (coordPoint [] tab){
+	int i; 
+	for (i = 0 ; i < tab.length ; i++){
+		for (j = 0 ; i < tab.length ; i++){
+			System.out.println((i+1) + " // "  + (j+1) + " : "+ "x = " + tab[i].x + " " + "y = " + " "  + tab[i].y + " z = " + " " + tab[i].z);
+		}
+	}
+}
 
 /* Main of file */
 	public static void main(String[] args) {
@@ -322,5 +385,9 @@ public static void affichageTableauD2(boolean [][] tab){
 		System.out.println("x : " + point.x);
 		System.out.println("y : " + point.y);
 		System.out.println("z : " + point.z);
+		System.out.println("------------------------------------------------");
+		coordPoint [] tabg = new coordPoint [TAILLE];
+		initTableauD1(tabg);
+		affichageTableauD1(tabg);
 	}
 }
