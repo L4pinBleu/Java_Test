@@ -322,6 +322,5 @@ public static void affichageTableauD2(boolean [][] tab){
 		System.out.println("x : " + point.x);
 		System.out.println("y : " + point.y);
 		System.out.println("z : " + point.z);
-
 	}
 }
