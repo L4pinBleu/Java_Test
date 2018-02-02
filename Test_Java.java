@@ -22,8 +22,8 @@ public class Test_Java {
 * @return Vrai si a>b
 */
 public static boolean plusGrand(double a,double b){
-	if ( a > b ) return true;
-	else return false;
+	if ( a > b ) return true; //Une "chose" à faire donc pas besoin de { }
+	else return false; //Même chose
 }
 
 /**
@@ -69,15 +69,15 @@ static class coordPoint {
 * @param tab un tableau de boolean de dimmention 1
 */
 public static void initTableauD1(boolean [] tab){
-	int i;
+	int i; //Initialisation de la variable obligatoire ici
 	for (i = 0 ; i < tab.length ; i++ ){
-		tab[i] = (Math.random()<0.5);
+		tab[i] = (Math.random()<0.5); //Affecte true si condition est validée
 	}
 }
 
 /** 
 * Remplie un tableau de boolean de dimention 2 avec équiprobabilité
-* d'un tableau de boolean passer en parametre.
+* d'un tableau de boolean.
 *
 * @param tab un tableau de boolean de dimention 2
 */
@@ -99,7 +99,7 @@ public static void initTableauD2(boolean [][] tab) {
 public static void initTableauD1(int [] tab){
 	int i , lower = 0, higher = 101; //Int entre 0 et 100 (101 exclus)
 	for (i = 0 ; i < tab.length ; i++ ){
-		tab[i] = ( ((int)Math.random() * (higher - lower)) + lower );
+		tab[i] = ( ((int)Math.random() * (higher - lower)) + lower ); //Tire un nombre aléatoire entre lower et higher
 	}
 }
 
@@ -305,7 +305,7 @@ public static void affichageTableauD2(boolean [][] tab){
 }
 
 /** 
-* Initialisation d'un tableau de Type Agrége de coordonée a une dimention
+* Initialisation d'un tableau de Type Agrege de coordonée a une dimention
 *
 * @param tab : Tableau de type agreger
 */
@@ -328,11 +328,10 @@ public static void initTableauD1 (coordPoint [] tab){
 * @param tab : Tableau de type agreger
 */
 
-public static void initTableauD2 (coordPoint [] tab){
+public static void initTableauD2 (coordPoint [][] tab){
 	int i,j;
 	for (i = 0 ; i < tab.length ; i++){
 		for (j = 0 ; j < tab.length ; j++){
-		
 			tab[i][j] = new coordPoint();
 			tab[i][j].x = ( (double)Math.random()*(50-25) ) +25;
 			tab[i][j].y = ( (double)Math.random()*(50-25) ) +25;
@@ -360,11 +359,11 @@ public static void affichageTableauD1 (coordPoint [] tab){
 * @param tab : Tableau de type agreger
 */
 
-public static void affichageTableauD1 (coordPoint [] tab){
-	int i; 
+public static void affichageTableauD2 (coordPoint [][] tab){
+	int i,j; 
 	for (i = 0 ; i < tab.length ; i++){
-		for (j = 0 ; i < tab.length ; i++){
-			System.out.println((i+1) + " // "  + (j+1) + " : "+ "x = " + tab[i].x + " " + "y = " + " "  + tab[i].y + " z = " + " " + tab[i].z);
+		for (j = 0 ; j < tab.length ; j++){
+			System.out.println((i+1) + " // "  + (j+1) + " : "+ "x = " + tab[i][j].x + " " + "y = " + " "  + tab[i][j].y + " z = " + " " + tab[i][j].z);
 		}
 	}
 }
@@ -386,8 +385,8 @@ public static void affichageTableauD1 (coordPoint [] tab){
 		System.out.println("y : " + point.y);
 		System.out.println("z : " + point.z);
 		System.out.println("------------------------------------------------");
-		coordPoint [] tabg = new coordPoint [TAILLE];
-		initTableauD1(tabg);
-		affichageTableauD1(tabg);
+		coordPoint [][] tabg = new coordPoint [TAILLE][TAILLE];
+		initTableauD2(tabg);
+		affichageTableauD2(tabg);
 	}
 }
