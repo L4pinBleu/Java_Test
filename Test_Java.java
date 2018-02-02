@@ -53,6 +53,13 @@ public static boolean plusGrand(float a,float b){
 }
 
 /* -------------------------------------------------------------------------------------- */
+//Type Agrege
+
+static class coordPoint {
+	double x = 0, y = 0, z = 0;
+};
+
+/* -------------------------------------------------------------------------------------- */
 //Tableau
 
 /** 
@@ -302,12 +309,19 @@ public static void affichageTableauD2(boolean [][] tab){
 /* Main of file */
 	public static void main(String[] args) {
 		//Variables locales
-		final int TAILLE = 2;
-		int [][] tab = new int [TAILLE][TAILLE];  //Création tableau de boolean à une dimention
+		final int TAILLE = 50;
+		int [][] tab = new int [TAILLE][TAILLE];  //Création tableau de boolean à une dimention3
 		int i;                                 //Initialisation de la variable
 		//Execution du programme
 		initTableauD2(tab);
 		affichageTableauD2(tab);
+		coordPoint point = new coordPoint(); //Déclaration d'un type agrege
+		point.x = 5.0; //Dans type agrege variable x de type double prend la valeur 5.0
+		point.y = 4.0;
+		point.z = 8.0;
+		System.out.println("x : " + point.x);
+		System.out.println("y : " + point.y);
+		System.out.println("z : " + point.z);
 
 	}
 }
