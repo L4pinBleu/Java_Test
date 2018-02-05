@@ -309,7 +309,6 @@ public static void affichageTableauD2(boolean [][] tab){
 *
 * @param tab : Tableau de type agreger
 */
-
 public static void initTableauD1 (coordPoint [] tab){
 	int i;
 	for ( i = 0 ; i < tab.length ; i++ ){
@@ -327,7 +326,6 @@ public static void initTableauD1 (coordPoint [] tab){
 *
 * @param tab : Tableau de type agreger
 */
-
 public static void initTableauD2 (coordPoint [][] tab){
 	int i,j;
 	for ( i = 0 ; i < tab.length ; i++ ){
@@ -345,7 +343,6 @@ public static void initTableauD2 (coordPoint [][] tab){
 *
 * @param tab : Tableau de type agreger
 */
-
 public static void affichageTableauD1 (coordPoint [] tab){
 	int i; 
 	for ( i = 0 ; i < tab.length ; i++ ){
@@ -358,7 +355,6 @@ public static void affichageTableauD1 (coordPoint [] tab){
 *
 * @param tab : Tableau de type agreger
 */
-
 public static void affichageTableauD2 (coordPoint [][] tab){
 	int i,j; 
 	for ( i = 0 ; i < tab.length ; i++ ){
@@ -367,6 +363,15 @@ public static void affichageTableauD2 (coordPoint [][] tab){
 		}
 	}
 }
+/** 
+* Tri d'un tableau a une dimention
+* 
+* @param tab : Tableau d entier
+*/
+public static void triTableauD1 (int [] tab){
+}
+
+
 
 /* Main of file */
 	public static void main(String[] args) {
