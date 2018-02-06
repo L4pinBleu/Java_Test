@@ -375,7 +375,7 @@ public static int [] triTableauD1 (int [] tab){
 	/* Boucle de parcours de tableau */
 	for (j = 0 ; j < tab.length ; j++){ //Parcours du tableau retour
 		for (i = 0 ; i < tab.length ; i++){ //Parcours du tableau d'entrée
-			//Quand j = 0
+			/* Quand j = 0 */
 			if (j == 0) {
 				if (tab[i] > tabt[j]){
 					tabt[j] = tab[i]; //Ajout au tableau triée de la valeur
@@ -386,7 +386,7 @@ public static int [] triTableauD1 (int [] tab){
 					tabt[j] = tab[i]; //Puis ajout de la valeur
 				}
 			}
-			//Quand j > 1
+			/* Quand j > 1 */
 			if  (j >= 1){
 				if ( (tab[i] > tabt[j])&& (tab[i] < tabt[j-1]) ){
 					tabt[j] = tab[i];
@@ -398,11 +398,11 @@ public static int [] triTableauD1 (int [] tab){
 				}
 			}
 		}
-		//Vérifie si compteur et bien supérieur à 1
+		/* Vérifie si compteur et bien supérieur à 1 */
 		if (compteur > 1){
-			//Ajout n fois le nombre de fois le nombre
+			/* Ajout n fois le nombre de fois le nombre */
 			for (compteur = compteur-1 ; compteur > 0 ; compteur--){
-				if (j < tab.length-2){	
+				if (j < tab.length-2){
 					tabt[j+1] = tabt[j];
 					j+=1; //Incrémentation de 1 pour ne pas dépaser le tableau
 				}
@@ -412,18 +412,23 @@ public static int [] triTableauD1 (int [] tab){
 	return tabt; //Retourne le tableau : ATTENTION ERREUR QUAND O UNIQUE !
 }
 
-
+/**
+* Inverse les valeurs d'un tableau
+*
+* @param tab : Un Tableau d'entier a une dimention
+* @return tabr : Un Tableau d'entier a une dimention
+*/
+public static int [] invTableauD1(int [] tab) {
+	/*  Initialisation des variables */
+	int i;
+	int [] tabr = new int [tab.length];
+	for (i = 0 ; i < tab.length ; i++){
+		tabr[(tab.length-1)-i] = tab[i];
+	}
+	return tabr;
+}
 
 /* Main of file */
 	public static void main(String[] args) {
-		//Variables locales
-		final int TAILLE = 50;
-		int [] tab = new int [TAILLE];  //Creation tableau de boolean à une dimention
-		//Execution du programme
-		initTableauD1(tab);
-		affichageTableauD1(tab);
-		System.out.println("-------------------------------------------------------------------------");
-		tab = triTableauD1(tab);
-		affichageTableauD1(tab);
 	}
 }
