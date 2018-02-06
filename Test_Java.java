@@ -1,4 +1,4 @@
-/** Program of Test. 
+/** Program of Test.
 * @author Nicolas Mor
 * @author nicolas.mor@edu.univ-fcomte.fr
 * @version 1.0 30/01/2018
@@ -51,7 +51,6 @@ public static boolean plusGrand(float a,float b){
 	if (a>b)return true;
 	else return false;
 }
-
 /* -------------------------------------------------------------------------------------- */
 //Type Agrege
 
@@ -62,7 +61,7 @@ static class coordPoint {
 /* -------------------------------------------------------------------------------------- */
 //Tableau
 
-/** 
+/**
 * Remplie un tableau de boolean de dimention 1 avec équiprobabilité
 * d'un tableau de boolean passer en parametre.
 *
@@ -75,7 +74,7 @@ public static void initTableauD1(boolean [] tab){
 	}
 }
 
-/** 
+/**
 * Remplie un tableau de boolean de dimention 2 avec équiprobabilité
 * d'un tableau de boolean.
 *
@@ -90,7 +89,7 @@ public static void initTableauD2(boolean [][] tab) {
 	}
 }
 
-/** 
+/**
 * Remplie un tableau de int de dimention 1 avec equiprobabilite
 * d'un tableau de int passer en parametre.
 *
@@ -99,11 +98,11 @@ public static void initTableauD2(boolean [][] tab) {
 public static void initTableauD1(int [] tab){
 	int i , lower = 0, higher = 101; //Int entre 0 et 100 (101 exclus)
 	for ( i = 0 ; i < tab.length ; i++ ){
-		tab[i] = ( ((int)Math.random() * (higher - lower)) + lower ); //Tire un nombre aleatoire entre lower et higher
+		tab[i] = ( (int) (Math.random( ) * (higher - lower)) +lower ); //Tire un nombre aleatoire entre lower et higher
 	}
 }
 
-/** 
+/**
 * Remplie un tableau de int de dimention 2 avec equiprobabilite
 * d'un tableau de int passer en parametre.
 *
@@ -118,7 +117,7 @@ public static void initTableauD2(int [][] tab) {
 	}
 }
 
-/** 
+/**
 * Remplie un tableau de float de dimention 1 avec equiprobabilite
 * d'un tableau de float passer en parametre.
 *
@@ -131,7 +130,7 @@ public static void initTableauD1(float [] tab){
 	}
 }
 
-/** 
+/**
 * Remplie un tableau de float de dimention 2 avec equiprobabilite
 * d'un tableau de float passer en parametre.
 *
@@ -146,7 +145,7 @@ public static void initTableauD2(float [][] tab) {
 	}
 }
 
-/** 
+/**
 * Remplie un tableau de double de dimention 1 avec equiprobabilite
 * d'un tableau de double passer en parametre.
 *
@@ -159,7 +158,7 @@ public static void initTableauD1(double [] tab){
 	}
 }
 
-/** 
+/**
 * Remplie un tableau de double de dimention 2 avec equiprobabilite
 * d'un tableau de double passer en parametre.
 *
@@ -174,50 +173,50 @@ public static void initTableauD2(double [][] tab) {
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau a 1 dimention de double
 *
 * @param tab : Un tableau a une dimention
 */
 public static void affichageTableauD1(double [] tab){
-	int i; 
+	int i;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		System.out.println((i+1) + " : " + tab[i]);
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau a 2 dimention de double
 *
 * @param tab : Un tableau a deux dimention
 */
 public static void affichageTableauD2(double [][] tab){
-	int i,j; 
+	int i,j;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		for ( j = 0 ; j < tab.length ; j++ )
 		System.out.println("i = " + (i+1) + " //// j =  " + (j+1) + " : " + tab[i][j]);
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau a 1 dimention de int
 *
 * @param tab : Un tableau a une dimention
 */
 public static void affichageTableauD1(int [] tab){
-	int i; 
+	int i;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		System.out.println((i+1) + " : " + tab[i]);
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau a 2 dimention de int
 *
 * @param tab : Un tableau a deux dimention
 */
 public static void affichageTableauD2(int [][] tab){
-	int i,j; 
+	int i,j;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		for ( j = 0 ; j < tab.length ; j++ ){
 		System.out.println("i = " + (i+1) + " //// j =  " + (j+1) + " : " + tab[i][j]);
@@ -225,25 +224,25 @@ public static void affichageTableauD2(int [][] tab){
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau a 1 dimention de float
 *
 * @param tab : Un tableau a une dimention
 */
 public static void affichageTableauD1(float [] tab){
-	int i; 
+	int i;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		System.out.println((i+1) + " : " + tab[i]);
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau a 2 dimention de float
 *
 * @param tab : Un tableau a deux dimention
 */
 public static void affichageTableauD2(float [][] tab){
-	int i,j; 
+	int i,j;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		for ( j = 0 ; j < tab.length ; j++ ){
 		System.out.print(tab[j] + " ");
@@ -254,57 +253,57 @@ public static void affichageTableauD2(float [][] tab){
 
 
 
-/** 
+/**
 * Affichage d'un tableau a 1 dimention de String
 *
 * @param tab : Un tableau a une dimention
 */
 public static void affichageTableauD1(String [] tab){
-	int i; 
+	int i;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		System.out.println((i+1.0) + " : " + tab[i]);
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau a 2 dimention de String
 *
 * @param tab : Un tableau a deux dimention
 */
 public static void affichageTableauD2(String [][] tab){
-	int i,j; 
+	int i,j;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		for ( j = 0 ; j < tab.length ; j++ )
 		System.out.println("i = " + (i+1) + " //// j =  " + (j+1) + " : " + tab[i][j]);
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau a 1 dimention de boolean
 *
 * @param tab : Un tableau a une dimention
 */
 public static void affichageTableauD1(boolean [] tab){
-	int i; 
+	int i;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		System.out.println((i+1.0) + " : " + tab[i]);
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau a 2 dimention de boolean
 *
 * @param tab : Un tableau a deux dimention
 */
 public static void affichageTableauD2(boolean [][] tab){
-	int i,j; 
+	int i,j;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		for ( j = 0 ; j < tab.length ; j++ )
 		System.out.println("i = " + (i+1) + " //// j =  " + (j+1) + " : " + tab[i][j]);
 	}
 }
 
-/** 
+/**
 * Initialisation d'un tableau de Type Agrege de coordonee a une dimention
 *
 * @param tab : Tableau de type agreger
@@ -312,7 +311,7 @@ public static void affichageTableauD2(boolean [][] tab){
 public static void initTableauD1 (coordPoint [] tab){
 	int i;
 	for ( i = 0 ; i < tab.length ; i++ ){
-		
+
 		tab[i] = new coordPoint();
 		tab[i].x = ( (double)Math.random()*(50-25) ) +25;
 		tab[i].y = ( (double)Math.random()*(50-25) ) +25;
@@ -321,7 +320,7 @@ public static void initTableauD1 (coordPoint [] tab){
 	}
 }
 
-/** 
+/**
 * Initialisation d'un tableau de Type Agrege de coordonée a deux dimention
 *
 * @param tab : Tableau de type agreger
@@ -338,37 +337,79 @@ public static void initTableauD2 (coordPoint [][] tab){
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau de Type agreger de coordonée a une dimention
 *
 * @param tab : Tableau de type agreger
 */
 public static void affichageTableauD1 (coordPoint [] tab){
-	int i; 
+	int i;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		System.out.println((i+1) + " : " + "x = " + tab[i].x + " " + "y = " + " "  + tab[i].y + " z = " + " " + tab[i].z);
 	}
 }
 
-/** 
+/**
 * Affichage d'un tableau de Type agreger de coordonée a deux dimentions
 *
 * @param tab : Tableau de type agreger
 */
 public static void affichageTableauD2 (coordPoint [][] tab){
-	int i,j; 
+	int i,j;
 	for ( i = 0 ; i < tab.length ; i++ ){
 		for ( j = 0 ; j < tab.length ; j++ ){
 			System.out.println((i+1) + " // "  + (j+1) + " : "+ "x = " + tab[i][j].x + " " + "y = " + " "  + tab[i][j].y + " z = " + " " + tab[i][j].z);
 		}
 	}
 }
-/** 
+/**
 * Tri d'un tableau a une dimention
-* 
+*
 * @param tab : Tableau d entier
+* @return tabt : Un tableau triée (croissant)
 */
-public static void triTableauD1 (int [] tab){
+public static int [] triTableauD1 (int [] tab){
+/* Initialisation des variables */
+	int [] tabt = new int [tab.length];
+	int i, j, compteur = 0;
+	/* Boucle de parcours de tableau */
+	for (j = 0 ; j < tab.length ; j++){ //Parcours du tableau retour
+		for (i = 0 ; i < tab.length ; i++){ //Parcours du tableau d'entrée
+			//Quand j = 0
+			if (j == 0) {
+				if (tab[i] > tabt[j]){
+					tabt[j] = tab[i]; //Ajout au tableau triée de la valeur
+					compteur = 0; //Ajout d'une nouvelle valeur donc réinitialisation
+				}
+				if (tab[i] == tabt[j]){
+					compteur += 1; //Même valeur donc on compte +1
+					tabt[j] = tab[i]; //Puis ajout de la valeur
+				}
+			}
+			//Quand j > 1
+			if  (j >= 1){
+				if ( (tab[i] > tabt[j])&& (tab[i] < tabt[j-1]) ){
+					tabt[j] = tab[i];
+					compteur = 0;
+				}
+				if (tab[i] == tabt[j]){
+					compteur += 1;
+					tabt[j] = tab[i];
+				}
+			}
+		}
+		//Vérifie si compteur et bien supérieur à 1
+		if (compteur > 1){
+			//Ajout n fois le nombre de fois le nombre
+			for (compteur = compteur-1 ; compteur > 0 ; compteur--){
+				if (j < tab.length-2){	
+					tabt[j+1] = tabt[j];
+					j+=1; //Incrémentation de 1 pour ne pas dépaser le tableau
+				}
+			}
+		}
+	}
+	return tabt; //Retourne le tableau : ATTENTION ERREUR QUAND O UNIQUE !
 }
 
 
@@ -377,21 +418,12 @@ public static void triTableauD1 (int [] tab){
 	public static void main(String[] args) {
 		//Variables locales
 		final int TAILLE = 50;
-		int [][] tab = new int [TAILLE][TAILLE];  //Creation tableau de boolean à une dimention
-		int i;                                 //Initialisation de la variable
+		int [] tab = new int [TAILLE];  //Creation tableau de boolean à une dimention
 		//Execution du programme
-		initTableauD2(tab);
-		affichageTableauD2(tab);
-		coordPoint point = new coordPoint(); //Declaration d'un type agrege
-		point.x = 5.0; //Dans type agrege variable x de type double prend la valeur 5.0
-		point.y = 4.0;
-		point.z = 8.0;
-		System.out.println("x : " + point.x);
-		System.out.println("y : " + point.y);
-		System.out.println("z : " + point.z);
-		System.out.println("------------------------------------------------");
-		coordPoint [][] tabg = new coordPoint [TAILLE][TAILLE];
-		initTableauD2(tabg);
-		affichageTableauD2(tabg);
+		initTableauD1(tab);
+		affichageTableauD1(tab);
+		System.out.println("-------------------------------------------------------------------------");
+		tab = triTableauD1(tab);
+		affichageTableauD1(tab);
 	}
 }
