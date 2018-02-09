@@ -22,8 +22,9 @@ public class Test_Java {
 * @return Vrai si a>b
 */
 public static boolean plusGrand(double a,double b){
-	if ( a > b ) return true; //Une "chose" à faire donc pas besoin de { }
-	else return false; //Même chose
+    //Une "chose" à faire donc pas besoin de { }
+//Même chose
+    return a > b;
 }
 
 /**
@@ -35,8 +36,7 @@ public static boolean plusGrand(double a,double b){
 * @return Vrai si a>b
 */
 public static boolean plusGrand(int a,int b){
-	if (a>b)return true;
-	else return false;
+    return a > b;
 }
 
 /**
@@ -48,17 +48,16 @@ public static boolean plusGrand(int a,int b){
 * @return Vrai si a>b
 */
 public static boolean plusGrand(float a,float b){
-	if (a>b)return true;
-	else return false;
+    return a > b;
 }
 /* -------------------------------------------------------------------------------------- */
 //Type Agrege
 
 static class coordPoint {
 	double x = 0, y = 0, z = 0;
-};
+}
 
-/* -------------------------------------------------------------------------------------- */
+    /* -------------------------------------------------------------------------------------- */
 //Tableau
 
 /**
@@ -154,7 +153,7 @@ public static void initTableauD2(float [][] tab) {
 public static void initTableauD1(double [] tab){
 	int i, lower =0, higher = 100  ; //Double entre 0 et 99.99 ...
 	for ( i = 0 ; i < tab.length ; i++ ){
-		tab[i] = ( (double) (Math.random( ) * (higher - lower)) +lower );
+		tab[i] = ( Math.random( ) * (higher - lower) +lower );
 	}
 }
 
@@ -168,7 +167,7 @@ public static void initTableauD2(double [][] tab) {
 	int i,j, lower =0, higher = 100 ; //Double entre 0 et 99.99 ...
 	for ( i = 0 ; i < tab.length ; i++ ){
 		for ( j = 0 ; j < tab.length ; j++ ){
-			tab[i][j] = ( (double) (Math.random( ) * (higher - lower)) +lower );
+			tab[i][j] = ( Math.random( ) * (higher - lower) +lower );
 		}
 	}
 }
@@ -313,9 +312,9 @@ public static void initTableauD1 (coordPoint [] tab){
 	for ( i = 0 ; i < tab.length ; i++ ){
 
 		tab[i] = new coordPoint();
-		tab[i].x = ( (double)Math.random()*(50-25) ) +25;
-		tab[i].y = ( (double)Math.random()*(50-25) ) +25;
-		tab[i].z = ( (double)Math.random()*(50-25) ) +25;
+		tab[i].x = ( Math.random() *(50-25) ) +25;
+		tab[i].y = ( Math.random() *(50-25) ) +25;
+		tab[i].z = ( Math.random() *(50-25) ) +25;
 
 	}
 }
@@ -330,9 +329,9 @@ public static void initTableauD2 (coordPoint [][] tab){
 	for ( i = 0 ; i < tab.length ; i++ ){
 		for ( j = 0 ; j < tab.length ; j++ ){
 			tab[i][j] = new coordPoint();
-			tab[i][j].x = ( (double)Math.random()*(50-25) ) +25;
-			tab[i][j].y = ( (double)Math.random()*(50-25) ) +25;
-			tab[i][j].z = ( (double)Math.random()*(50-25) ) +25;
+			tab[i][j].x = ( Math.random() *(50-25) ) +25;
+			tab[i][j].y = ( Math.random() *(50-25) ) +25;
+			tab[i][j].z = ( Math.random() *(50-25) ) +25;
 		}
 	}
 }
@@ -430,5 +429,8 @@ public static int [] invTableauD1(int [] tab) {
 
 /* Main of file */
 	public static void main(String[] args) {
+		int [] tab = new int [50];
+		initTableauD1(tab);
+		affichageTableauD1(tab);
 	}
 }
