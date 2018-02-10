@@ -54,7 +54,9 @@ public static boolean plusGrand(float a,float b){
 //Type Agrege
 
 static class coordPoint {
-	double x = 0, y = 0, z = 0;
+	double x = 0,
+  y = 0,
+  z = 0;
 }
 
     /* -------------------------------------------------------------------------------------- */
