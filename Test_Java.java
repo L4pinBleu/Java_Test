@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.*;
+
 /** Program of Test.
 * @author Nicolas Mor
 * @author nicolas.mor@edu.univ-fcomte.fr
@@ -364,7 +367,7 @@ public static void affichageTableauD2 (coordPoint [][] tab){
 	}
 }
 /**
-* Tri d'un tableau a une dimention
+* Tri d'un tableau a une dimention (Pas la meilleur des méthodes car utilise un autre tableau et prend donc plus d'espace mémoire)
 *
 * @param tab : Tableau d entier
 * @return tabt : Un tableau triée (croissant)
@@ -429,10 +432,44 @@ public static int [] invTableauD1(int [] tab) {
 	return tabr;
 }
 
+   public static class Panneau extends JPanel {
+    public void paintComponent(Graphics g) {
+        //Méthode invoquer = phrase
+        System.out.println("Hello i'm here");
+        g.fillOval(20,30,75,75);
+    }
+   }
+
+    //Création d'une fenetre
+    public static class Fenetre extends JFrame {
+        public Fenetre(){
+            //Nommer la fenetre
+            this.setTitle("Test d'une fenetre");
+            //Saisir la taille de la fenetre
+            this.setSize(400,500);
+            //Placer au centre de l'écran
+            this.setLocationRelativeTo(null);
+            //Tuer le processus si croix rouge
+            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            //Visible ou non
+            this.setVisible(false);
+            //Empeche ou non le redimensionnement de la fenetre
+            setResizable(true);
+            //Garder au premier plan ou pas
+            setAlwaysOnTop(false);
+
+            //Objet JPanel
+            JPanel pan = new JPanel();
+            //Def couleur de fond
+            pan.setBackground(Color.BLACK);
+            //Set content
+            this.setContentPane(new Panneau());
+            this.setVisible(true);
+        }
+    }
+
 /* Main of file */
 	public static void main(String[] args) {
-		int [] tab = new int [50];
-		initTableauD1(tab);
-		affichageTableauD1(tab);
+		Fenetre fen = new Fenetre();
 	}
 }
