@@ -6,44 +6,19 @@
  * @version 1.1 31/01/2018
  */
 public class Fonc_Math {
-    /**
-     * Retourne le plus grand des arguments
-     * @param a,b
-     *
-     * @return le plus grand
-     */
-    public static int plusgrandNB(int a,int b) {
-        if (a > b) {
-            return a;
-        } else {
-            return b;
-        }
-    }
-
-    public static float plusgrandNB(float a,float b) {
-        if (a > b) {
-            return a;
-        } else {
-            return b;
-        }
-    }
-
-    public static double plusgrandNB(double a,double b) {
-        if (a > b) {
-            return a;
-        } else {
-            return b;
-        }
-    }
-
-    public static int plusgrandNB(String a,String b) {
-        if (a > b) {
-            return a;
-        } else {
-            return b;
-        }
-    }
 
     /* ------------------------------------------------------------------------------------------------ */
+    /**
+     * Calcul le périmetre d'un cercle
+     *
+     * @param r : le rayon
+     *
+     * @return le perimetre du cercle
+     */
+    public static double perimetreCercle(float r){
+        return 2*Math.PI*r;
+    }
+    /* ------------------------------------------------------------------------------------------------ */
+
 
 }

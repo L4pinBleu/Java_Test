@@ -10,7 +10,7 @@
 class Test_Java {
     /*      Main      */
     public static void main(String[] args) {
-
+        System.out.println(Fonc_Math.perimetreCercle(5));
     }
 
 }
